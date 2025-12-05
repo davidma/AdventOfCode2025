@@ -6,3 +6,4 @@ All the puzzles are at: https://adventofcode.com/2025
 - Day2: both parts, all good
 - Day3: both parts, no issues
 - Day4: both parts, no issues
+- Day5: both parts done, last part took a bit of thinking!
