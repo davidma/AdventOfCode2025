@@ -1,5 +1,11 @@
 #!/usr/bin/python3
 
+## ======================================================
+## For timing statistics
+import time
+stime = time.perf_counter()
+## ======================================================
+
 ##==============================================================================
 ## Generic helper functions for working with AdventOfCode Grid data
 ##
@@ -111,3 +117,9 @@ for (i,j) in rolls:
 
 ## All done, print the results
 print ('Result is: ' + str(result))
+
+## ======================================================
+## Time taken
+etime = time.perf_counter()
+print (f"[TIMER: Ran in {(etime - stime)*1000:0.4f} ms]")
+## ======================================================

@@ -1,3 +1,11 @@
+#!/usr/bin/python3
+
+## ======================================================
+## For timing statistics
+import time
+stime = time.perf_counter()
+## ======================================================
+
 file = open('input.txt','r');
 
 result = 0
@@ -39,3 +47,9 @@ for line in file:
             curr += 1
 
 print ('Result is: ' + str(result))
+
+## ======================================================
+## Time taken
+etime = time.perf_counter()
+print (f"[TIMER: Ran in {(etime - stime)*1000:0.4f} ms]")
+## ======================================================
