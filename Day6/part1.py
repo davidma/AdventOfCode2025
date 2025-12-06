@@ -10,12 +10,9 @@ file = open('input.txt','r');
 
 result = 0
 
-## input has four lines of numbers
+## input has multiple lines of numbers and a single line of operators
 numbers = []
-## and a single line of operators
 operators = []
-
-line_num = 0
 
 ## Go through file, line by line - add to the appropriate datastructure
 for line in file:
