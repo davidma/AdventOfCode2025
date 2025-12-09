@@ -10,3 +10,4 @@ All the puzzles are at: https://adventofcode.com/2025
 - Day6: Weekend, only had time to do part 1
 - Day7: Out all day, haven't tried it yet
 - Day8: All done, but pressed for time, so had a look at the subreddit for general ideas
+- Day9: Working on it
