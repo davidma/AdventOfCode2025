@@ -12,7 +12,7 @@ nodes = []
 rectangles = []
 
 ## add each (x,y) point from file to a list
-for line in open('input.txt','r'):
+for line in open('input_test.txt','r'):
     nodes.append(tuple(map(int,line.strip().split(','))))
 
 ## calculate all the unique rectangle sizes
@@ -27,8 +27,27 @@ for (x1,y1) in nodes:
 ## Sort based on calculated sizes
 rectangles = sorted(rectangles,key=lambda x: x[4], reverse=True)
 
-## Size of the largest rectangle we found
-result = rectangles[0][4]
+## OK, for part 2 - we need to check the rectangles to see if they are wholey contained inside the green polygon
+## We check to see if any part of the green polygon cuts through and of the edges of our rectangle
+## The original input file has the nodes in order - so each node connects directly to the next node
+for (x1,y1,x2,y2,area) in rectangles:
+    for i,(gx1,gy1) in enumerate(nodes):
+
+        if i == len(nodes) - 1:
+            j = 0
+        else:
+            j = i+1
+
+        (gx2,gy2) = nodes[j]
+
+        if area > 20:
+            print(x1,y1,x2,y2,area,gx1,gy1,gx2,gy2)
+
+        ## check if the line from gx1,gy1  to gx2,gy2 intersects the rectangle
+        ## TODO: fix this
+
+        ## If got this far, we have no intersection,and hence a result
+        result = area
 
 ## Heres the result
 print ('Result is: ' + str(result))
