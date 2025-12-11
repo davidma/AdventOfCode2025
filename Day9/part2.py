@@ -12,7 +12,7 @@ nodes = []
 rectangles = []
 
 ## add each (x,y) point from file to a list
-for line in open('input_test.txt','r'):
+for line in open('input.txt','r'):
     nodes.append(tuple(map(int,line.strip().split(','))))
 
 ## calculate all the unique rectangle sizes
@@ -27,27 +27,40 @@ for (x1,y1) in nodes:
 ## Sort based on calculated sizes
 rectangles = sorted(rectangles,key=lambda x: x[4], reverse=True)
 
-## OK, for part 2 - we need to check the rectangles to see if they are wholey contained inside the green polygon
-## We check to see if any part of the green polygon cuts through and of the edges of our rectangle
-## The original input file has the nodes in order - so each node connects directly to the next node
+## OK, for part 2 - we need to check the rectangles to see if contain any part of the green polygon edge - so we make a set of all those points
+green_tiles = set()
+for i,(xa,ya) in enumerate(nodes):
+    (xb,yb) = nodes[(i+1) % len(nodes)]
+
+    ## Vertical line
+    if (xa == xb):
+        (y1,y2) = sorted((ya,yb))
+        for j in range(abs(y2-y1)+1):
+            green_tiles.add((xa,y1+j))
+
+    ## Horizontal line
+    else:
+        (x1,x2) = sorted((xa,xb))
+        for j in range(abs(x2-x1)+1):
+            green_tiles.add((x1+j,ya))    
+
+## Check each rectangle
 for (x1,y1,x2,y2,area) in rectangles:
-    for i,(gx1,gy1) in enumerate(nodes):
 
-        if i == len(nodes) - 1:
-            j = 0
-        else:
-            j = i+1
+    (x1,x2) = sorted((x1,x2))
+    (y1,y2) = sorted((y1,y2))
 
-        (gx2,gy2) = nodes[j]
+    intersect = False
+    ## Check if any member of the green polygon is inside the bounds of curr rectangle
+    for (gx,gy) in green_tiles:
+        if x1 < gx < x2 and y1 < gy < y2:
+            intersect = True
+            break
 
-        if area > 20:
-            print(x1,y1,x2,y2,area,gx1,gy1,gx2,gy2)
-
-        ## check if the line from gx1,gy1  to gx2,gy2 intersects the rectangle
-        ## TODO: fix this
-
-        ## If got this far, we have no intersection,and hence a result
+    ## because rectangles are sorted, first non-intersecting pair wins!
+    if not intersect:
         result = area
+        break
 
 ## Heres the result
 print ('Result is: ' + str(result))

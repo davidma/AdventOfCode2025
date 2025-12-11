@@ -10,6 +10,6 @@ All the puzzles are at: https://adventofcode.com/2025
 - Day6:  Weekend, only had time to do part 1
 - Day7:  Out all day, haven't tried it yet
 - Day8:  All done, but pressed for time, so had a look at the subreddit for general ideas
-- Day9:  Did part1, havnt finished part 2
+- Day9:  Both parts, all good. 
 - Day10: Havent tried yet, it looks rough
 - Day11: both parts, all good
