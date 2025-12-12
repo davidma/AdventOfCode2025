@@ -17,6 +17,6 @@ As requested, none of the puzzle inputs, or sample inputs are included - I norma
 - Day7:  Both parts, no big issues
 - Day8:  All done, but pressed for time, so had a look at the subreddit for general ideas
 - Day9:  Both parts, all good. 
-- Day10: Part 1 done, gone to read up on part 2
+- Day10: Part 1 done, had to resort to z3 and someone elses code for part 2
 - Day11: Both parts, all good
 - Day12: Read problem, panic - read memes, realize its trivial
