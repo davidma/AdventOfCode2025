@@ -1,5 +1,7 @@
 All the puzzles are at: https://adventofcode.com/2025
 
+As requested, none of the puzzle inputs, or sample inputs are included - I normally store them as input_test.txt and input.txt in the same folder as the problem code for each day
+
 **Progress on Puzzles**
 
 - Day1:  both parts, all good
