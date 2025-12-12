@@ -14,7 +14,7 @@ As requested, none of the puzzle inputs, or sample inputs are included - I norma
 - Day4:  both parts, no issues
 - Day5:  both parts done, last part took a bit of thinking!
 - Day6:  both parts, all good (once I leared how strip() works...)
-- Day7:  *** Out all day, haven't tried it yet
+- Day7:  both parts, no big issues
 - Day8:  All done, but pressed for time, so had a look at the subreddit for general ideas
 - Day9:  Both parts, all good. 
 - Day10: *** Havent tried yet, it looks rough
