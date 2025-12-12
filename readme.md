@@ -7,9 +7,10 @@ All the puzzles are at: https://adventofcode.com/2025
 - Day3:  both parts, no issues
 - Day4:  both parts, no issues
 - Day5:  both parts done, last part took a bit of thinking!
-- Day6:  Weekend, only had time to do part 1
-- Day7:  Out all day, haven't tried it yet
+- Day6:  *** Weekend, only had time to do part 1
+- Day7:  *** Out all day, haven't tried it yet
 - Day8:  All done, but pressed for time, so had a look at the subreddit for general ideas
 - Day9:  Both parts, all good. 
-- Day10: Havent tried yet, it looks rough
+- Day10: *** Havent tried yet, it looks rough
 - Day11: both parts, all good
+- Day12: read problem, panic - read memes, realize its trivial
